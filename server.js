@@ -9,6 +9,9 @@ app.use(cors());
 // Global Use
 app.use(express.json());
 
+// Serve static files (images in this case) from the "public" directory
+app.use(express.static("public"));
+
 // Welcome Route
 app.get("/", (req, res) => {
   res.send("Welcome to the Movify API!");
